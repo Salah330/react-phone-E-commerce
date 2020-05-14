@@ -20,10 +20,15 @@ class ProductProvider extends Component {
       return { products };
     });
   };
+  getItem = (id) => {
+    const productt = this.state.products.find((item) => item.id === id);
+    return productt;
+  };
   handleDetail = (id) => {
-    console.log("====================================");
-    console.log("hello from details");
-    console.log("====================================");
+    const item = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: item };
+    });
   };
   handleCart = (id) => {
     console.log(`${id}`);

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "./Nanbar";
-import styled from "styled-components";
 export default class Details extends Component {
   render() {
     return (
@@ -39,12 +38,11 @@ export default class Details extends Component {
                     price : <span>$</span>
                     {price}
                   </h4>
-
-                  <p className="text-capitalize text-body text-black-50 font-weight-bold mt-3 lead">
-                    <h6 className="text-capitalize text-body text-black font-weight-bold mt-3 mb-1">
-                      {" "}
-                      some info about product :
-                    </h6>
+                  <h5 className="text-capitalize text-body text-black font-weight-bold mt-4 mb-1">
+                    {" "}
+                    some info about product :
+                  </h5>
+                  <p className="text-capitalize text-body text-black-50 font-weight-bold  lead">
                     {info}
                   </p>
                   <Link to="/">
@@ -52,6 +50,7 @@ export default class Details extends Component {
                   </Link>
 
                   <ButtonContainer
+                    cart
                     disabled={inCart ? true : false}
                     onClick={() => {
                       v.handleCart(id);
