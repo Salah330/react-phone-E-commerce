@@ -16,7 +16,7 @@ body {
   text-transform: uppercase;
 }
 .text-blue {
-  color: var(--lightBlue);
+  color: var(--mainBlue);
 }
 .text-bright {
   color: var(--lightBlue);

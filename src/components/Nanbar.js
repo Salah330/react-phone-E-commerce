@@ -26,7 +26,7 @@ export default class Nanbar extends Component {
     );
   }
 }
-const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button`
   text-transform: capitalize;
   font-size: 1.4rem;
   background: transparent;
