@@ -31,7 +31,11 @@ class ProductProvider extends Component {
     });
   };
   handleCart = (id) => {
-    console.log(`${id}`);
+    let newProducts = [...products],
+    const index = newProducts.indexOf(this.getItem(id));
+    const product = newProducts[index];
+    product.inCart = true;
+    product.count = 1;
   };
   render() {
     return (
