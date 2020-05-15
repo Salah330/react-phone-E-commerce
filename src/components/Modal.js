@@ -19,9 +19,31 @@ export default class Modal extends Component {
                   <div className="row">
                     <div
                       id="modal"
-                      className="col-8 mx-auto col-md-6 col-lg-4 text-capitalize text-center"
+                      className="col-8 mx-auto col-md-6 col-lg-4 text-capitalize text-center p-5"
                     >
-                      <h5>hello from modal</h5>
+                      <h5>Item added to the cart</h5>
+                      <img src={img} className="img-fluid" alt="product" />
+                      <h5 className="mt-2">{title}</h5>
+                      <h5 className="text-muted">price : ${price}</h5>
+                      <Link to="/">
+                        <ButtonContainer
+                          onClick={() => {
+                            v.closeModal();
+                          }}
+                        >
+                          Back to store
+                        </ButtonContainer>
+                      </Link>
+                      <Link to="/cart">
+                        <ButtonContainer
+                          cart
+                          onClick={() => {
+                            v.closeModal();
+                          }}
+                        >
+                          go to cart
+                        </ButtonContainer>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -44,4 +66,8 @@ const ModalContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  #modal {
+    background: var(--mainWhite);
+    border-radius: 1rem;
+  }
 `;
