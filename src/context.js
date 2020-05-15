@@ -6,7 +6,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: [],
+    cart: storeProducts,
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal: 0,
@@ -60,7 +60,7 @@ class ProductProvider extends Component {
     });
   };
   increment = (id) => {
-    console.log("hello increment");
+    console.log("hello");
   };
   decrement = (id) => {
     console.log("hello decrement");
@@ -81,9 +81,9 @@ class ProductProvider extends Component {
           openModal: this.openModal,
           closeModal: this.closeModal,
           increment: this.increment,
-          decrement: this.increment,
-          removeItem: this.increment,
-          clearCart: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart,
         }}
       >
         {this.props.children}
