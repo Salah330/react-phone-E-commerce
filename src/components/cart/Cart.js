@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../../context";
-import { ButtonContainer } from "../Nanbar";
 import Title from "../Title";
 import CartColumns from "./CartColumns";
 import Emptycart from "./Emptycart";
